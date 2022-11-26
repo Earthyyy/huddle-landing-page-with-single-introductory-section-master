@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --clr-violet: hsl(257, 40%, 49%);
+    --clr-soft-magenta: hsl(300, 69%, 71%);
+
+
+    --ff-heading: 'Poppins', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+
+    --fw-regular: 400;
+    --fw-medium: 600;
+}
+
+
+
+
+
+/* Josh Comeau CSS Reset*/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+
+/* General Styling */
+
+body {
+    background: url("./images/bg-mobile.svg") no-repeat;
+    background-size: contain;
+    background-color: var(--clr-violet);
+
+    font-family: var(--ff-body);
+    font-weight: var(--fw-regular);
+
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+/* Header Styling */
+
+header {
+    align-self: flex-start;
+}
+
+
+.huddle-logo {
+    width: 9.71rem;
+
+}
+
+
+/* About Section Styling */
+
+.about-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-inline: .2rem;
+    color: white;
+}
+
+.about-section>h1 {
+    font-weight: var(--fw-medium);
+    font-family: var(--ff-heading);
+}
+
+
+.about-section>a {
+    text-decoration: none;
+    color: var(--clr-violet);
+    background-color: white;
+    padding: .8rem 4.8rem;
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    font-size: .8275rem;
+    margin-top: .7rem;
+    font-family: var(--ff-heading);
+    transition: all 200ms ease;
+}
+
+a:hover {
+    background-color: var(--clr-soft-magenta);
+    color: white;
+}
+
+/* Footer Styling */
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: .8rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+
+
+footer>i {
+    border: 1px solid white;
+    padding: .4rem;
+    border-radius: 50%;
+    transition: all 100ms ease;
+}
+
+footer>i:hover {
+    border-color: var(--clr-soft-magenta);
+    color: var(--clr-soft-magenta);
+    cursor: pointer;
+}
+
+.fa-facebook-f {
+    padding-inline: 9.4px;
+}
+
+.fa-instagram {
+    padding-inline: 7.4px;
+}
+
+
+/* Media Queries */
+
+@media only screen and (min-width: 790px) {
+    body {
+        background: url("./images/bg-desktop.svg") no-repeat;
+        background-color: var(--clr-violet);
+        background-size: 95vw 100%;
+
+        display: grid;
+        grid-template:
+            "header header header"
+            "illustration illustration about"
+            "footer footer footer";
+        padding-inline: 4.5rem;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    .illustration-section {
+        grid-area: illustration;
+    }
+
+    .about-section {
+        grid-area: about;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    .about-section {
+        padding: 0rem;
+        align-items: flex-start;
+        text-align: start;
+    }
+
+    .about-section>h1 {
+        line-height: 1.2;
+        font-size: min(3vw, 2.8rem);
+
+    }
+
+    .about-section>p {
+        line-height: 1.6;
+        font-size: clamp(1rem, 1.6vw, 1.2rem);
+    }
+
+    footer {
+        justify-content: end;
+    }
+
+
+}
