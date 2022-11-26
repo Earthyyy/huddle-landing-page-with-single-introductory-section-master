@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Huddle landing page by Earthyy](...)
+- Live Site URL: [Huddle landing page by Earthyy](https://earthyy-huddle-landing-page.netlify.app/)
 
 ## My process
 
